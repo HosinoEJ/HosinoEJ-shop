@@ -7,6 +7,10 @@ body{
     transition: background-color 0.3s ease;/*漸變動畫，bg_setting的基礎動畫*/
 }
 
+a{
+    color: rgb(36, 105, 253);
+}
+
 html[lang="zh_tw"] body {/*這個是自動選擇字體*/
     font-family: 'zh-tw', sans-serif;
 }
@@ -164,8 +168,7 @@ opacity: 1;
 
 /*链接文本1   (<a href="#" class="LinkText1")*/
 .LinkText1{
-    text-decoration: none;
-    color: black;
+    /*已经弃用*/
 }
 
 

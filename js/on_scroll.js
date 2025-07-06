@@ -16,3 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+function handleAnimateOnScroll() {
+  const animatedElements = document.querySelectorAll(
+    '[data-animate-on-scroll-Left], [data-animate-on-scroll-Right], [animate-gradient]'
+  );
+  animatedElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (inView) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleAnimateOnScroll);
+window.addEventListener('resize', handleAnimateOnScroll);
+window.addEventListener('DOMContentLoaded', handleAnimateOnScroll);
